@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <title>Canputer</title>
+</head>
+<body>
+    <div id="main">
+        <form method="get" onsubmit="return false;" class="dashboard">
+            <button name="abbaglianti" type="submit" class="btn" id="abbaglianti">
+                <span class="icon icon-headlight"></span>
+                <span class="text text-headlight">Abbaglianti: off</span>
+            </button>
+            <button name="luci-interne" type="submit" class="btn" id="luci_interne">
+                <span class="icon icon-lightbulb"></span>
+                <span class="text text-lightbulb">Luci interne: off</span>
+            </button>
+            <button name="porta" type="submit" class="btn" id="porta">
+                <span class="icon icon-lock-open"></span>
+                <span class="text text-lock">Porta: aperta</span>
+            </button>
+            <button name="baule" type="submit" class="btn" id="baule">
+                <span class="icon icon-trunk"></span>
+                <span class="text text-trunk">Baule: chiuso</span>
+            </button>
+        </form>
+    </div>
+    <script src="{{ url_for('static',filename='carputer.js') }}"></script>
+</body>
+</html>

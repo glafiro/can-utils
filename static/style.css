@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?7wjp6v');
+    src:  url('fonts/icomoon.eot?7wjp6v#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?7wjp6v') format('truetype'),
+      url('fonts/icomoon.woff?7wjp6v') format('woff'),
+      url('fonts/icomoon.svg?7wjp6v#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-trunk:before {
+    content: "\e900";
+  }
+  .icon-headlight:before {
+    content: "\e901";
+  }
+  .icon-lightbulb:before {
+    content: "\e902";
+  }
+  .icon-lock-closed:before {
+    content: "\e903";
+  }
+  .icon-lock-open:before {
+    content: "\e904";
+  }
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,700&display=swap');
+
+body {
+    background-color: #202020;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 600px) { 
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 50vw ;
+    }
+
+    .icon {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 900px) { 
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        width: 95vw ;
+        height: 500px;
+    }
+
+    .icon {
+        font-size: 100px;
+    }
+}
+
+
+.btn {
+    background-color: #ced2cc;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    transition: all .4s ease;
+    padding: 0px;
+
+}
+
+.icon {
+    font-size: 180px;
+    text-align: center;
+    margin: 0 auto;
+    transition: all .4s ease;
+    padding: 0px;
+
+}
+
+.text {
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-transform: lowercase;
+    transition: all .4s ease;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.icon, .text {
+    color: #1f3f49;
+}
+
+.btn-active {
+    background-color: #e9efe7;
+}
+
+.btn-active > .icon,
+.btn-active > .text {
+    color: #3b94af;
+}
