@@ -36,11 +36,11 @@ btns.forEach(btn => {
         if (toggles[btn.id]["isOn"] == false) {
             toggles[btn.id]["isOn"] = true;
             btn.classList.add("btn-active");
-            btn.children[1].innerHTML = toggles[btn.id]["on_text"]
+            btn.children[0].innerHTML = toggles[btn.id]["on_text"]
         } else {
             toggles[btn.id]["isOn"] = false;
             btn.classList.remove("btn-active");
-            btn.children[1].innerHTML = toggles[btn.id]["off_text"]
+            btn.children[0].innerHTML = toggles[btn.id]["off_text"]
         }
     })
 });
